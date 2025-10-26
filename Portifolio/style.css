@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #000;
+}
+header {
+    top: 0;
+    left: 0;
+    background-color: #000000CC;
+    opacity: 0.8;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+}
+header nav {
+    position: absolute;
+    left: 75%;
+    top: 25px;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+header nav a {
+    text-decoration: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+main img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+main p {
+    width: 400px;
+}
+main button {
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px 10px 10px 10px;
+}
+main button:hover {
+    background-color: #b30015;
+}
+.digitando {
+  width: 27ch; /* número de caracteres */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #C1121F;
+  color: #fff;
+  font-family: monospace;
+  font-size: 24px;
+  animation: digita 3s steps(25), pisca 0.7s infinite;
+}
+
+@keyframes digita {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes pisca {
+  50% {
+    border-color: transparent;
+  }
+}
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.sobre-mim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sobre-mim p {
+    width: 700px;
+}
+/* ===== SEÇÃO DE PROJETOS ===== */
+.projects {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Cada card */
+.projects > div {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* organiza verticalmente */
+  justify-content: space-between; /* joga o botão pra baixo */
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 350px; /* altura fixa pra deixar tudo alinhado */
+}
+
+.projects > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(193, 18, 31, 0.6);
+}
+
+/* Imagens */
+.projects img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Título */
+.projects h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Descrição */
+.projects p {
+  font-size: 0.9rem;
+  color: #ccc;
+  flex-grow: 1; /* ocupa espaço e empurra o botão pra baixo */
+}
+
+/* Botões */
+.projects button {
+  background-color: #C1121F;
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.projects button:hover {
+  background-color: #FF1F3D;
+  transform: scale(1.05);
+}
+
+/* Botão "ver mais projetos" */
+.projects a button {
+  margin-top: 40px;
+  background-color: transparent;
+  border: 2px solid #C1121F;
+}
+
+.projects a button:hover {
+  background-color: #C1121F;
+  color: #fff;
+}
+
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn {
+    background-color: black;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: none;
+}
+.btn i {
+    color: #fff;
+    width: 75px;
+    height: 75px;
+    font-size: 45pt;
+}
+.contato button {
+    background-color: transparent;
+    border: none;
+}
+.contato button:hover {
+    background-color: #b30015;
+    border-radius: 25px;
+}
+ .dashboard {
+    max-width: 900px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .card p {
+    margin: 10px 0 0;
+    color: #555;
+  }
+
+   .dashboard {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .skill {
+    margin-bottom: 25px;
+  }
+
+  .skill h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #555;
+  }
+
+  .progress {
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 25px;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background: #C1121F;
+    border-radius: 20px;
+    text-align: right;
+    padding-right: 10px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 25px;
+    transition: width 1.5s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    main img {
+        width: 150px;
+        height: 150px;
+    }
+    main p {
+        max-width: 90%;
+        font-size: 16px;
+    }
+    .projects {
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .projects div {
+        width: 80%;
+        height: 120px;
+    }
+    .skill h3 {
+        font-size: 16px;
+    }
+    .progress {
+        height: 20px;
+    }
+    .progress-bar {
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .projects {
+    gap: 20px;
+  }
+
+  .projects > div {
+    width: 45%;
+    height: 330px;
+  }
+}
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: wrap;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    main img {
+        width: 120px;
+        height: 120px;
+    }
+    .dashboard {
+        padding: 20px;
+    }
+    .skill h3 {
+        font-size: 14px;
+    }
+    .progress {
+        height: 18px;
+    }
+    .progress-bar {
+        line-height: 18px;
+        font-size: 12px;
+    }
+     .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects > div {
+    width: 90%;
+    height: auto;
+  }
+
+  .projects img {
+    height: 180px;
+  }
+
+  .projects button {
+    width: 100%;
+  }
+}

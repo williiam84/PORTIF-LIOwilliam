@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio </title>
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#sobremim">Sobre mim</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main id="inicio">
+        <div class="logo">
+            <img src="img/Williamimagelogo.jpg" alt="">
+        </div>
+        <h2 class="digitando">Olá, eu sou William Gabriel</h2>
+        <p>Gosto de unir design e tecnologia pra construir sistemas web eficientes, modernos e com identidade.
+Tenho experiência em HTML, CSS e JavaScript, criando desde interfaces criativas até APIs completas.
+
+Sempre em busca de novos desafios e evolução constante.</p>
+
+<div class="btns">
+    <a href="#projetos"><button>Ver meus Projetos</button></a>
+    <a href="#contato"><button>Entrar em contato</button></a>
+</div>
+    </main>
+
+    <div class="sobre-mim" id="sobremim">
+        <h2>Sobre mim</h2>
+        <p>Sou o William Gabriel, desenvolvedor Full Stack em formação com foco em tecnologias web modernas.
+
+Comecei estudando HTML e CSS, depois me aprofundei em JavaScript, e sigo evoluindo no desenvolvimento de aplicações completas, do front ao backend.
+
+Gosto de criar projetos que realmente funcionem — com design limpo, código bem feito e experiência fluida para o usuário.
+
+Estou sempre aprendendo novas ferramentas e aprimorando minhas habilidades para transformar ideias em soluções reais.
+
+🚀 Meu objetivo é crescer como desenvolvedor e construir projetos que impactem pessoas e negócios.</p>
+
+    </div>
+
+
+<div class="dashboard" id="dashboard">
+  <h2>Minhas Habilidades</h2>
+
+  <div class="skill">
+    <h3>HTML</h3>
+    <div class="progress">
+      <div class="progress-bar" data-progress="90%">0%</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <h3>CSS</h3>
+    <div class="progress">
+      <div class="progress-bar" data-progress="80%">0%</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <h3>JavaScript</h3>
+    <div class="progress">
+      <div class="progress-bar" data-progress="70%">0%</div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <h3>Node.js</h3>
+    <div class="progress">
+      <div class="progress-bar" data-progress="60%">0%</div>
+    </div>
+  </div>
+
+</div>
+
+    <div class="projects" id="projetos">
+        <div>
+            <img src="img/ecommecer.png" alt="">
+            <h3>Loja e-commecer</h3>
+            <p></p>
+            <button>Visitar</button>
+        </div>
+        <div>
+            <img src="img/cadstrodeusuarios.png" alt="">
+            <h3>Pagina de login</h3>
+            <p></p>
+            <button>Visitar</button>
+        </div>
+        <div>
+            <img src="img/cadastrodelogin.png" alt="">
+            <h3>Pagina de login 2</h3>
+            <p></p>
+            <button>Visitar</button>
+        </div>
+        <div>
+            <img src="img/qr.png" alt="">
+            <h3>Gerador de Qrcode</h3>
+            <p></p>
+            <button>Visitar</button>
+        </div>
+        <div>
+            <img src="img/encur.png" alt="">
+            <h3>Encurtador de url</h3>
+            <p></p>
+            <button>Visitar</button>
+        </div>
+        <a href="https://github.com/williiam84"><button>Ver mais projetos</button></a>
+    </div>
+
+    <div class="contato" id="contato">
+        <h2>Contatos</h2>
+
+       <div class="btn">
+       <a href="https://github.com/williiam84"><button><i class="fa-brands fa-github"></i></button></a>
+        <a href="https://api.whatsapp.com/send/?phone=27997230221&text&type=phone_number&app_absent=0"><button><i class="fa-brands fa-whatsapp"></i></button></a>
+        <button  onclick="Email()"><i class="fa-solid fa-envelope"></i></button>
+       </div>
+    </div>
+    <script>
+         window.addEventListener('load', () => {
+    const bars = document.querySelectorAll('.progress-bar');
+    bars.forEach(bar => {
+      const progress = bar.getAttribute('data-progress');
+      setTimeout(() => {
+        bar.style.width = progress;
+        bar.textContent = progress;
+      }, 200);
+    });
+  });
+
+  function Email(){
+    alert("Não tenho!")
+  }
+    </script>
+</body>
+</html>
